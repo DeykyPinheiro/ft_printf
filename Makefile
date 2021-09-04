@@ -36,4 +36,7 @@ fclean:		clean
 
 re:			fclean all
 
+run:
+			clear && gcc ft_printf.c libftprintf.a && ./a.out
+
 .PHONY:		all clean fclean re libft
