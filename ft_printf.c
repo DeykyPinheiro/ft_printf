@@ -66,7 +66,7 @@ int	main(void)
 	printf("ORIGI inteiro: %i pos impressao\n", i);
 	ft_printf("COPIA inteiro: %i pos impressao\n", i);
 	printf("============================================================\n");
-	// printf("");
+	printf("");
 
 
 }

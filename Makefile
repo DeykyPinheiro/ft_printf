@@ -1,7 +1,7 @@
 LIBFT_PATH =./libft
 LIBFT =		$(LIBFT_PATH)/libft.a
 
-SOURCES =	ft_printf.c
+SOURCES =	ft_printf.c ft_itoa_base.c
 
 OBJECTS =	$(SOURCES:.c=.o)
 
