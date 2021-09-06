@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   int_to_base.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/14 22:28:39 by demikael          #+#    #+#             */
-/*   Updated: 2021/08/14 22:28:40 by demikael         ###   ########.fr       */
+/*   Created: 2021/09/06 14:35:01 by demikael          #+#    #+#             */
+/*   Updated: 2021/09/06 14:56:12 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "./libft/libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int_to_base(unsigned long int n, char *base)
 {
-	size_t	i;
+	int size;
 
-	if (size == 0)
-		return (ft_strlen(src));
-	i = 0;
-	while (i < size - 1 && src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = 0;
-	return (ft_strlen(src));
+	size = ft_strlen(base);
 }
