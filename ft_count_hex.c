@@ -6,14 +6,14 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 00:25:47 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/09 15:07:21 by demikael         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:38:16 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "./libft/libft.h"
-# include "ft_printf.h"
+#include "./libft/libft.h"
+#include "ft_printf.h"
 
-int ft_count_hex(unsigned long int n)
+int	ft_count_hex(unsigned long int n)
 {
 	int	i;
 

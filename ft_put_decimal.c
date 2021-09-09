@@ -6,12 +6,12 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 20:37:25 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/09 02:18:34 by demikael         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:39:19 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "./libft/libft.h"
-# include "ft_printf.h"
+#include "./libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_put_decimal(int decimal)
 {
@@ -19,5 +19,5 @@ int	ft_put_decimal(int decimal)
 
 	count = ft_count_digit(decimal);
 	ft_putnbr_fd(decimal, 1);
-	return(count);
+	return (count);
 }

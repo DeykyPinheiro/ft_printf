@@ -6,17 +6,17 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 20:22:15 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/09 01:29:55 by demikael         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:35:17 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "./libft/libft.h"
-# include "ft_printf.h"
-# include <unistd.h>
+#include "./libft/libft.h"
+#include "ft_printf.h"
+#include <unistd.h>
 
 int	ft_put_string(const char **fmt, char *ap)
 {
-	int count;
+	int	count;
 
 	if (!ap)
 	{

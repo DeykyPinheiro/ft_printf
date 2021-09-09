@@ -6,15 +6,15 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 20:34:58 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/09 16:44:07 by demikael         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:38:02 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "./libft/libft.h"
-# include "ft_printf.h"
-# include <unistd.h>
+#include "./libft/libft.h"
+#include "ft_printf.h"
+#include <unistd.h>
 
-static void ft_reverse(char *str)
+static void	ft_reverse(char *str)
 {
 	size_t	end;
 	size_t	start;
@@ -32,7 +32,6 @@ static void ft_reverse(char *str)
 	}
 }
 
-
 static char	*ft_itoa_base_l(unsigned long int number, char *base)
 {
 	char	*str;
@@ -44,7 +43,6 @@ static char	*ft_itoa_base_l(unsigned long int number, char *base)
 		return (ft_strdup("0"));
 	size_base = ft_strlen(base);
 	size_number = ft_count_hex(number);
-
 	str = ft_calloc(size_number + 1, sizeof(char));
 	if (!str)
 		return (NULL);
@@ -58,14 +56,13 @@ static char	*ft_itoa_base_l(unsigned long int number, char *base)
 	return (str);
 }
 
-int	ft_put_pointer(const char** fmt ,unsigned long pointer)
+int	ft_put_pointer(const char **fmt, unsigned long pointer)
 {
 	int		count;
-	char	* number;
-
+	char	*number;
 
 	count = 2;
-	(*fmt ) = (*fmt) + 2;
+	(*fmt) = (*fmt) + 2;
 	count += ft_count_hex(pointer);
 	write(1, "0x", 2);
 	number = ft_itoa_base_l(pointer, "0123456789abcdef");

@@ -6,18 +6,17 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 21:12:24 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/09 01:43:27 by demikael         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:34:54 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-# include "./libft/libft.h"
-# include "ft_printf.h"
+#include "./libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_put_unsigned(const char **fmt, unsigned int number)
 {
-	int count;
-	char *n;
+	int		count;
+	char	*n;
 
 	(*fmt) = (*fmt) + 2;
 	n = ft_itoa(number);

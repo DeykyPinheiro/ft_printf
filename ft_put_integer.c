@@ -6,16 +6,16 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 20:38:01 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/08 23:22:22 by demikael         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:38:42 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "./libft/libft.h"
-# include "ft_printf.h"
+#include "./libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_put_integer(const char **fmt, int n)
 {
-	int count;
+	int	count;
 
 	(*fmt) = (*fmt) + 2;
 	count = ft_count_digit(n);

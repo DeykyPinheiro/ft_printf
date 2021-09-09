@@ -6,13 +6,13 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 14:35:01 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/09 16:05:06 by demikael         ###   ########.fr       */
+/*   Updated: 2021/09/09 19:40:36 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
+#include "ft_printf.h"
 
-static void ft_reverse(char *str)
+static void	ft_reverse(char *str)
 {
 	size_t	end;
 	size_t	start;
@@ -30,7 +30,6 @@ static void ft_reverse(char *str)
 	}
 }
 
-
 char	*ft_itoa_base(unsigned int number, char *base)
 {
 	char	*str;
@@ -42,7 +41,6 @@ char	*ft_itoa_base(unsigned int number, char *base)
 		return (ft_strdup("0"));
 	size_base = ft_strlen(base);
 	size_number = ft_count_hex(number);
-
 	str = ft_calloc(size_number + 1, sizeof(char));
 	if (!str)
 		return (NULL);
