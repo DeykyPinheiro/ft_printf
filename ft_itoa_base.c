@@ -6,11 +6,11 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 14:35:01 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/06 19:19:29 by demikael         ###   ########.fr       */
+/*   Updated: 2021/09/09 02:35:10 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "./libft/libft.h"
+# include "ft_printf.h"
 
 static void ft_reverse(char *str)
 {
@@ -41,9 +41,9 @@ char	*ft_itoa_base(unsigned long int number, char *base)
 	if (number == 0)
 		return (ft_strdup("0"));
 	size_base = ft_strlen(base);
-	size_number = ft_count_digit(number);
+	size_number = ft_count_hex(number);
 
-	str = ft_calloc(size_number, sizeof(char));
+	str = ft_calloc(size_number + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	i = 0;
