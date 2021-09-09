@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 14:35:01 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/09 02:35:10 by demikael         ###   ########.fr       */
+/*   Updated: 2021/09/09 16:05:06 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void ft_reverse(char *str)
 }
 
 
-char	*ft_itoa_base(unsigned long int number, char *base)
+char	*ft_itoa_base(unsigned int number, char *base)
 {
 	char	*str;
 	int		size_base;

@@ -2,24 +2,22 @@
 #include <stdio.h>
 #include <unistd.h>
 
-
-static int ft_check(const char fmt)
+static int	ft_check(const char fmt)
 {
-	return (fmt == 'c' || fmt == 's' || fmt == 'p'|| fmt == 'd'||fmt == 'i'
+	return (fmt == 'c' || fmt == 's' || fmt == 'p' || fmt == 'd'|| fmt == 'i'
 	|| fmt == 'u' || fmt == 'x' || fmt == 'X' || fmt == '%');
 }
 
-
 int	ft_printf(const char *fmt, ...)
 {
-	va_list ap;
-	va_start(ap, fmt);
-	int sum;
+	va_list	ap;
+	int		sum;
 
+	va_start(ap, fmt);
 	sum = 0;
-	while(*fmt)
+	while (*fmt)
 	{
-		if(*fmt == '%'  && ft_check(*(fmt + 1) ))
+		if (*fmt == '%' && ft_check(*(fmt + 1)))
 		{
 			if (*(fmt + 1) == 'c')
 				sum += ft_put_char(&fmt, va_arg(ap, int));
@@ -27,13 +25,13 @@ int	ft_printf(const char *fmt, ...)
 				sum += ft_put_string(&fmt, va_arg(ap, char *));
 			else if (*(fmt + 1) == 'p')
 				sum += ft_put_pointer(&fmt, va_arg(ap, unsigned long));
-			else if(*(fmt + 1) == 'i' || *(fmt + 1) == 'd')
+			else if (*(fmt + 1) == 'i' || *(fmt + 1) == 'd')
 				sum += ft_put_integer(&fmt, va_arg(ap, int));
-			else if(*(fmt +1) == 'u')
+			else if (*(fmt +1) == 'u')
 				sum += ft_put_unsigned(&fmt, va_arg(ap, unsigned int));
-			else if(*(fmt +1) == 'x' || *(fmt+ 1) == 'X' )
+			else if (*(fmt + 1) == 'x' || *(fmt + 1) == 'X' )
 				sum += ft_put_hexadecimal(&fmt, va_arg(ap, unsigned long));
-			else if(*(fmt +1) == '%')
+			else if (*(fmt +1) == '%')
 				sum += ft_put_char(&fmt, '%');
 		}
 		else if (*fmt != '%')
@@ -43,20 +41,26 @@ int	ft_printf(const char *fmt, ...)
 			fmt++;
 		}
 	}
-	va_end(ap);
+	// va_end(ap);
 	return (sum);
 }
 
 //cspdiuxX%
 
-
 // int main (void)
 // {
+// // 	// int n;
+// // 	// n = printf("x\n", 9223372036854775807LL);
+// // 	// printf("%i\n", n);
+// // 	// n = ft_printf("%x\n", 9223372036854775807LL);
+// // 	// printf("%i\n", n);
+
 // 	int n;
-// 	n = printf("%llx\n", 9223372036854775807LL);
+// 	n = printf("%X\n", LONG_MAX);
 // 	printf("%i\n", n);
-// 	ft_printf("%x\n", 9223372036854775807LL);
+// 	n = ft_printf("%X\n", LONG_MAX);
 // 	printf("%i\n", n);
+
 // }
 
 // int	main(void)
@@ -108,10 +112,7 @@ int	ft_printf(const char *fmt, ...)
 	// printf("ORIGI %    % teste\n");
 	// ft_printf("COPIA %    % teste\n");
 
-
 // }
-
-
 
 	// while(fmt[i] != '%' && fmt[i]) //verificar cada uma das posicoes
 	// {
