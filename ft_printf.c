@@ -6,13 +6,11 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/09 21:14:42 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/09 21:14:43 by demikael         ###   ########.fr       */
+/*   Updated: 2021/10/02 21:09:00 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-#include <unistd.h>
 
 static int	ft_check(const char fmt)
 {
@@ -133,8 +131,8 @@ int	ft_printf(const char *fmt, ...)
 // 	printf("ORIGI %% teste\n");
 // 	ft_printf("COPIA %% teste\n");
 // 	printf("============================================================\n");
-// 	printf("ORIGI %    % teste\n");
-// 	ft_printf("COPIA %    % teste\n");
+// 	printf("ORIGI %    % teste\n"); // diferente no teste do paulo e do tipoule
+// 	ft_printf("COPIA %    % teste\n"); //pr no git dele
 
 // }
 

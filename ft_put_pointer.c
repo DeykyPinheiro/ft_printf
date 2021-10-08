@@ -6,13 +6,12 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 20:34:58 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/09 19:38:02 by demikael         ###   ########.fr       */
+/*   Updated: 2021/10/08 13:23:21 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "ft_printf.h"
-#include <unistd.h>
 
 static void	ft_reverse(char *str)
 {
